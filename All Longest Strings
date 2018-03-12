@@ -1,0 +1,23 @@
+https://codefights.com/arcade/intro/level-3/fzsCQGYbxaEcTr2bL
+/*
+Given an array of strings, return another array containing all of its longest strings.
+
+Example
+
+For inputArray = ["aba", "aa", "ad", "vcd", "aba"], the output should be
+allLongestStrings(inputArray) = ["aba", "vcd", "aba"].
+*/
+function allLongestStrings($inputArray) { 
+    $new = $inputArray;
+    usort($new, function($a, $b) {
+        return strlen($b) - strlen($a);
+    });  
+    $length = strlen($new[0]); 
+    $t = [];
+    foreach($inputArray as $val) {
+        if(strlen($val) === $length)
+            $t[] = $val;
+    } 
+    return $t;
+     
+}
