@@ -1,0 +1,23 @@
+https://codefights.com/arcade/intro/level-4/Xfeo7r9SBSpo3Wico
+/*
+Given a string, find out if its characters can be rearranged to form a palindrome.
+
+Example
+
+For inputString = "aabb", the output should be
+palindromeRearranging(inputString) = true.
+
+We can rearrange "aabb" to make "abba", which is a palindrome.
+*/
+
+function palindromeRearranging($inputString) { 
+    $x = 0;
+    $y = array_count_values(str_split($inputString)); 
+    foreach(array_count_values($y) as $k => $v) {
+        var_dump($v);
+        if($k % 2 !== 0 && $v > 1) 
+                return false;
+    }
+    return true;
+    
+}
