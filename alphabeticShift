@@ -1,0 +1,15 @@
+https://codefights.com/arcade/intro/level-6/PWLT8GBrv9xXy4Dui/description
+/*
+Given a string, replace each its character by the next one in the English alphabet (z would be replaced by a).
+
+Example
+
+For inputString = &quot;crazy&quot;, the output should be
+alphabeticShift(inputString) = &quot;dsbaz&quot;.
+*/
+function alphabeticShift($inputString) {
+    $alpha = range('a','z');
+    for (; $a = $inputString[$i++]; ) 
+         $f .= $alpha[($c = array_search($a, $alpha)) < 25 ? $c+1 : 0]; 
+    return $f; 
+}
