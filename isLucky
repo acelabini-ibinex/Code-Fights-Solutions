@@ -1,0 +1,19 @@
+https://codefights.com/arcade/intro/level-3/3AdBC97QNuhF6RwsQ
+/*
+Ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+
+Given a ticket number n, determine if it's lucky or not.
+
+Example
+
+For n = 1230, the output should be
+isLucky(n) = true;
+For n = 239017, the output should be
+isLucky(n) = false.
+*/
+function isLucky($n) {
+    $n = str_split($n);
+    $n1 = array_slice($n,0,count($n)/2);
+    $n2 = array_slice($n,count($n)/2);
+    return array_sum($n1) == array_sum($n2);
+}
