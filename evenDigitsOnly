@@ -1,0 +1,21 @@
+https://codefights.com/arcade/intro/level-6/6cmcmszJQr6GQzRwW
+/*
+Check if all digits of the given integer are even.
+
+Example
+
+For n = 248622, the output should be
+evenDigitsOnly(n) = true;
+For n = 642386, the output should be
+evenDigitsOnly(n) = false.
+*/
+
+function evenDigitsOnly($n) {
+    return
+        count($a = array_unique(
+                array_map( function($v) use($i){
+                        return $v % 2 === 0;
+                },str_split($n))
+                )) === 1 && $a[0] === true;
+        ; 
+}
